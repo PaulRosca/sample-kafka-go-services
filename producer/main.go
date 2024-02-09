@@ -29,7 +29,7 @@ func setupWriter() {
 	for {
 		err := w.WriteMessages(context.Background(),
 			kafka.Message{
-				Key:   []byte("Key-A"),
+				Key:   []byte(time.Now().String()),
 				Value: []byte(Message),
 			},
 		)
